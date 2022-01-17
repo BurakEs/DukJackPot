@@ -1,0 +1,220 @@
+﻿body {
+    background:url("../images/jackpotbg.png") repeat-y;
+	  padding: 0;
+  	margin: 0;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+*:not(input):not(textarea) {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+@font-face {
+    font-family: 'Open Sans bold';
+    src: url('./font/OpenSans-Bold.woff2') format('woff2'),
+        url('./font/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./font/OpenSans.woff2') format('woff2'),
+        url('./font/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#pageTitleBg{
+  background:url("../images/topbg.png") no-repeat;
+  background-size: 100%;
+  min-height: 198px;
+  text-align: center;
+}
+#pageTitleBg .title {
+  font-size: 80px;
+  color: white;
+  border-bottom: 5px dotted white;
+}
+#gameBoard{
+  margin-top: 100px;
+  background: #696969;
+  padding: 25px 25px 25px 25px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+}
+#gameBoard .gameBox{
+  width: 32%;
+  max-height: 350px;
+  display: inline-block;
+  border: 15px solid #3a3f43;
+  border-radius: 20px;
+  box-shadow: 5px 10px #595b5c;
+  overflow: hidden;
+  position: relative;
+}
+#gameBoard .gameBox .numberBg{
+  height: 3200px;
+  background-color: white;
+}
+#gameBoard .gameBox .number{
+  height: 320px;
+  display: block;
+  font-size: 300px;
+  margin:auto;
+  position: relative;
+  top: -50px;
+  font-weight: bold;
+}
+
+#gameBoard .joyStick {
+ background: rgb(197,0,0);
+ background: -moz-linear-gradient(180deg, rgba(197,0,0,1) 0%, rgba(142,0,0,1) 100%);
+ background: -webkit-linear-gradient(180deg, rgba(197,0,0,1) 0%, rgba(142,0,0,1) 100%);
+ background: linear-gradient(180deg, rgba(197,0,0,1) 0%, rgba(142,0,0,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c50000",endColorstr="#8e0000",GradientType=1);
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 0;
+  right: -100px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#gameBoard .joyStick .line {
+  background: rgb(47,51,54);
+  background: -moz-linear-gradient(180deg, rgba(47,51,54,1) 0%, rgba(88, 88, 88) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(47,51,54,1) 0%, rgba(88, 88, 88) 100%);
+  background: linear-gradient(180deg, rgba(47,51,54,1) 0%, rgba(88, 88, 88) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f3336",endColorstr="#cdcdcd",GradientType=1);
+  height: 250px;
+  width: 10px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+#gameBoard .joyStick .startButton{
+  display:  block ;
+  width:  85px;
+  height:   85px;
+  border-radius:  50%;
+  background-color:  white  ;
+  margin: auto  ;
+  z-index:5;
+  position:   absolute;
+  box-shadow: 0px 6px #595C38;
+  cursor:   pointer ;
+  top: 0;
+  left:   0;
+  right:  0;
+}
+
+#gameBoard .gameLife{
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #f6f6f6;
+  position: absolute;
+  left: -79px;
+  z-index: -1;
+  box-shadow: 0px 6px #4e4747;
+}
+
+#gameBoard .gameLife .gameLifeCount{
+    position: absolute;
+    left: 5px;
+    right: 0px;
+    line-height: 80px;
+}
+#gameBoard .gameText{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#gameBoard .gameScore {
+    display: block;
+    height: 70px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #f6f6f6;
+    position: absolute;
+    bottom: 20px;
+    z-index: -1;
+    box-shadow: 0px 6px #4e4747;
+}
+
+#gameBoard .gameTotalScore{
+    width: 220px;
+    right: 50px;
+}
+#gameBoard .scoreOne{
+    width: 100px;
+    right: 510px;
+}
+#gameBoard .scoreTwo{
+    width: 100px;
+    right: 400px;
+}
+#gameBoard .scoreThree{
+    width: 100px;
+    right: 290px;
+}
+#gameBoard .scoreLine{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 90%;
+    height: 9px;
+    background-color: red;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.gameScoreText{    
+    text-align: left;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    position: relative;
+    left: -10px;
+    top: -5px;
+}
+
+#gameBoard .scoreLine::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -11px;
+    border-style: solid;
+    border-width: 16px 0px 16px 16px;
+    border-color: transparent transparent transparent red;
+}
+
+#gameBoard .scoreLine::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -11px;
+    border-style: solid;
+    border-width: 16px 16px 16px 0;
+    border-color: transparent red transparent transparent;
+}
